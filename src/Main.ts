@@ -51,11 +51,12 @@ class Main extends egret.DisplayObjectContainer{
         App.SceneManager.runScene(SceneConsts.LOADING);
 
         //加载资源版本号
-        if(false){
-            App.ResVersionManager.loadConfig("resource/resource_version.json", this.loadResVersionComplate, this);
-        }else{
-            this.loadResVersionComplate();
-        }
+        // if(false){
+        //     App.ResVersionManager.loadConfig("resource/resource_version.json", this.loadResVersionComplate, this);
+        // }else{
+        //     this.loadResVersionComplate();
+        // }
+        this.loadResVersionComplate();
     }
 
     private loadResVersionComplate():void{

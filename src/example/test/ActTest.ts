@@ -51,5 +51,13 @@ class ActTest{
      */
     private initModule():void{
         App.ControllerManager.register(ControllerConst.Game, new GameController());
+        App.ControllerManager.register(ControllerConst.Login, new LoginController());
+        App.ControllerManager.register(ControllerConst.Home, new HomeController());
+        App.ControllerManager.register(ControllerConst.Friend, new FriendController());
+        App.ControllerManager.register(ControllerConst.Shop, new ShopController());
+        App.ControllerManager.register(ControllerConst.Warehouse, new WarehouseController());
+        App.ControllerManager.register(ControllerConst.Factory, new FactoryController());
+        App.ControllerManager.register(ControllerConst.Task, new TaskController());
+        App.ControllerManager.register(ControllerConst.Mail, new MailController());
     }
 }

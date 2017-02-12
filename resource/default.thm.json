@@ -33,6 +33,7 @@
     "resource/skins/MenuButtonSkin.exml",
     "resource/skins/GuiScreenSkin.exml",
     "resource/skins/LoadingUISkin.exml",
+    "resource/skins/LoginSkin.exml",
     "resource/skins/PanelSkin.exml",
     "resource/skins/SaleItemSkin.exml",
     "resource/skins/TabBarButtonSkin.exml",

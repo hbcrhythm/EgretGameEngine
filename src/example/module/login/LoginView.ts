@@ -4,7 +4,11 @@
 class LoginView extends BaseEuiView {
     public constructor($controller:BaseController, $parent:eui.Group){
         super($controller, $parent);
+        this.skinName = "resource/skins/LoginSkin.exml";
     }
+
+    public textName :eui.TextInput;
+    public submitBtn:eui.Button;
 
     /**
      *对面板进行显示初始化，用于子类继承
@@ -45,16 +49,18 @@ class LoginView extends BaseEuiView {
      * @param pwd
      */
     private onLogin():void{
-        var userName:string = "yangsong";
-        var pwd:string = "123456";
+        // var userName:string = "yangsong";
+        // var pwd:string = "123456";
+        var userName:string = this.textName.text;
         //进行基础检测
         if(userName == null || userName.length == 0){
             return;
         }
-        if(pwd == null || pwd.length == 0){
-            return;
-        }
-        this.applyFunc(LoginConst.LOGIN_C2S, userName, pwd);
+        // if(pwd == null || pwd.length == 0){
+        //     return;
+        // }
+        // this.applyFunc(LoginConst.LOGIN_C2S, userName, pwd);
+        this.applyFunc(LoginConst.LOGIN_C2S, userName);
     }
 
     /**

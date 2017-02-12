@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="LoginSkin" width="650" height="1000" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="650" height="1000" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" verticalCenter="0">
+		<e:Image id="login_bg" width="650" height="1000" anchorOffsetX="0" anchorOffsetY="0" source="timg_jpg" horizontalCenter="2" verticalCenter="1" scale9Grid="90,137,540,828"/>
+		<e:TextInput id="textName" width="121" height="24" rotation="359.78" anchorOffsetX="0" anchorOffsetY="0" x="305.01" verticalCenter="1"/>
+		<e:Label text="角色名：" x="150" anchorOffsetY="0" height="24" size="24" verticalCenter="2"/>
+		<e:Button id="submitBtn" label="确定" anchorOffsetX="0" width="71" anchorOffsetY="0" height="53" right="105" verticalCenter="0.5"/>
+	</e:Group>
+</e:Skin>

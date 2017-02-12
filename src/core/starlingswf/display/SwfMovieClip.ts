@@ -246,12 +246,12 @@ module starlingswf {
         }
 
         public addEventListener(type:string, listener:Function, thisObject:any, useCapture:boolean = false, priority:number = 0):void {
-            super.addEventListener(type, listener, thisObject, useCapture, priority);
+            // super.addEventListener(type, listener, thisObject, useCapture, priority);
             this._hasCompleteListener = this.hasEventListener(egret.Event.COMPLETE);
         }
 
         public removeEventListener(type:string, listener:Function, thisObject:any, useCapture:boolean = false):void {
-            super.removeEventListener(type, listener, thisObject, useCapture);
+            // super.removeEventListener(type, listener, thisObject, useCapture);
             this._hasCompleteListener = this.hasEventListener(egret.Event.COMPLETE);
         }
 

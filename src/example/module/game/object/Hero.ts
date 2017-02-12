@@ -14,6 +14,7 @@ class Hero extends BaseFrameGameObject{
     private attackMaxIndex:number = 0;
     private attackIndex:number = 0;
     private effectArmature:DragonBonesArmatureContainer;
+    private roleName: eui.Rect;
 
     public constructor($controller:BaseController){
         super($controller);
@@ -52,6 +53,14 @@ class Hero extends BaseFrameGameObject{
             Hero.ACTION_Skill3,
             Hero.ACTION_Skill4
         ]);
+
+        this.roleName = new eui.Rect();
+           this.roleName.fillColor = 0x78b93f;
+           this.roleName.width = 30;
+           this.roleName.height = 10;
+           this.roleName.x = this.x;
+           this.roleName.y = this.y - this.height - 30;
+        this.addChild(this.roleName);
     }
 
     public init():void {
@@ -98,6 +107,9 @@ class Hero extends BaseFrameGameObject{
     }
 
     public attack():void{
+        this.roleName.x = this.x;
+        this.roleName.y = this.y - 150;
+        console.log("this.y", this.roleName.x , "this.height", this.roleName.y);
         if(this.isJump)
             return;
 

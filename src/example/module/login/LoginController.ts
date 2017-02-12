@@ -36,8 +36,8 @@ class LoginController extends BaseController{
      * @param userName
      * @param pwd
      */
-    private onLogin(userName:string, pwd:string):void{
-        this.loginProxy.login(userName, pwd);
+    private onLogin(userName:string):void{
+        this.loginProxy.login(userName);
     }
 
     /**
@@ -52,5 +52,12 @@ class LoginController extends BaseController{
         App.ViewManager.close(ViewConst.Login);
 
         var model:BaseModel = this.getControllerModel(ControllerConst.Login);
+        
+        App.ViewManager.open(ViewConst.Game);
+        App.ViewManager.open(ViewConst.GameUI);
+        App.ViewManager.open(ViewConst.Home);
+
+        //播放背景音乐
+        App.SoundManager.playBg("sound_bg");
     }
 }

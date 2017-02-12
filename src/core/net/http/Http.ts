@@ -49,6 +49,7 @@ class Http extends BaseClass {
      * @param e
      */
     private onError(e:egret.Event):void {
+        console.log("request error ~n");
         this.nextPost();
     }
 
@@ -75,6 +76,7 @@ class Http extends BaseClass {
         }
 
         var arr:Array<any> = this._cache.shift();
+        console.log(arr);
         var type:string = arr[0];
         var urlVariables:egret.URLVariables = arr[1];
         this._type = type;
@@ -83,6 +85,7 @@ class Http extends BaseClass {
 
         this._urlLoader.addEventListener(egret.Event.COMPLETE, this.onLoaderComplete, this);
         this._urlLoader.load(this._request);
+        console.log("request");
         this._isRequesting = true;
     }
 
@@ -93,6 +96,7 @@ class Http extends BaseClass {
     private onLoaderComplete(event:egret.Event):void {
         this._urlLoader.removeEventListener(egret.Event.COMPLETE, this.onLoaderComplete, this);
         var t_obj:any = JSON.parse(this._urlLoader.data);
+        console.log("urldata", t_obj);
         if (!t_obj.hasOwnProperty("s") || t_obj["s"] == 0) {
             this._data.pUpdate.update(this._type, t_obj);
             App.MessageCenter.dispatch(this._type, t_obj);

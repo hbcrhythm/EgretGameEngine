@@ -14,10 +14,9 @@ class LoginProxy extends BaseProxy{
      * @param userName
      * @param pwd
      */
-    public login(userName:string, pwd:string):void{
+    public login(userName:string):void{
         var paramObj:any = {
-            "uName":userName,
-            "uPass":pwd
+            "uName":userName
         };
         this.sendHttpMsg(HttpConst.USER_LOGIN, paramObj);
     }

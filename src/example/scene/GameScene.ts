@@ -18,11 +18,28 @@ class GameScene extends BaseScene{
 
         this.addLayerAt(LayerManager.Game_Main, 0);
 
-        App.ViewManager.open(ViewConst.Game);
-        App.ViewManager.open(ViewConst.GameUI);
+        this.addLayer(LayerManager.UI_Main);
+        this.addLayer(LayerManager.UI_Popup);
+        this.addLayer(LayerManager.UI_Message);
+        this.addLayer(LayerManager.UI_Tips);
 
-        //播放背景音乐
-        App.SoundManager.playBg("sound_bg");
+        App.ViewManager.open(ViewConst.Login);
+        
+            //添加一个纯色背景
+            // var rect: eui.Rect = new eui.Rect();
+            // rect.fillColor = 0x78b93f;
+            // rect.percentHeight = 100;
+            // rect.percentWidth = 100;
+            // LayerManager.UI_Main.addChild(rect);
+
+        // App.ViewManager.open(ViewConst.Game);
+        // App.ViewManager.open(ViewConst.GameUI);
+
+
+        // App.ViewManager.open(ViewConst.Home);
+
+        // //播放背景音乐
+        // App.SoundManager.playBg("sound_bg");
     }
 
     /**

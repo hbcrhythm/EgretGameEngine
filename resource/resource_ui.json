@@ -289,8 +289,18 @@
         },
         {
             "name":"timg",
-            "type":"timg",
+            "type":"image",
             "url":"assets/bg/timg.jpg"
+        },
+        {
+            "name":"lifeBar",
+            "type":"image",
+            "url":"assets/example/lifeBar"
+        },
+        {
+            "name":"lifeBarBg",
+            "type":"image",
+            "url":"assets/example/lifeBarBg"
         }
     ]
 }

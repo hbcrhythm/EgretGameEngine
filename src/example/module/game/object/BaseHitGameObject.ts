@@ -48,6 +48,7 @@ class BaseHitGameObject extends BaseAIGameObject {
             this.hp -= 30;
         } else {
             this.hp -= 10;
+            this.lifeBar.setProgress(this.hp, this.maxHp);
         }
 
         if (this.hp <= 0) {

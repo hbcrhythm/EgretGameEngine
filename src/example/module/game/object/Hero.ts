@@ -14,7 +14,8 @@ class Hero extends BaseFrameGameObject{
     private attackMaxIndex:number = 0;
     private attackIndex:number = 0;
     private effectArmature:DragonBonesArmatureContainer;
-    private roleName: egret.Bitmap;
+    // private roleName:egret.TextField;
+    // private liftBa
 
     public constructor($controller:BaseController){
         super($controller);
@@ -62,18 +63,16 @@ class Hero extends BaseFrameGameObject{
 
         this.isAi = false;
         this.gotoIdle();
-
-        this.roleName = new egret.Bitmap();
-        var texture:egret.Texture = RES.getRes("lifeBarBg");
-
-        //    this.roleName.fillColor = 0x78b93f;
-        //    this.roleName.width = 80;
-        //    this.roleName.height = 10;
-        //    this.roleName.x = -40;
-        //    this.roleName.y = -this.armature.height - 5;
-        // //    console.log("armature height", this.armature.);
-        this.addChild(this.roleName);
-        // console.log("init armature height", );
+        this.maxHp = 300;
+        this.roleName.text = "hbc";
+        this.roleName.x = -20;
+        this.roleName.y = -this.armature.height - 20;
+        console.log(this.lifeBar);
+        // this.lifeBar.width = 30;
+        // this.lifeBar.height = 30;
+        this.lifeBar.x = 0;
+        this.lifeBar.y = -this.armature.height + 20;
+        this.addChild(this.lifeBar);
     }
 
     public destory():void {

@@ -17,12 +17,24 @@ class BaseGameObject extends egret.DisplayObjectContainer {
     public controller:BaseController;
     public armature:DragonBonesArmatureContainer;
     public hp:number;
+    public maxHp:number;
     public isDie:boolean;
+    public roleName:egret.TextField;
+
+    protected lifeBar:LifeBar;
+
 
     public constructor($controller:BaseController) {
         super();
         this.armature = new DragonBonesArmatureContainer();
         this.addChild(this.armature);
+
+        this.lifeBar = new LifeBar();
+        AnchorUtil.setAnchorX(this.lifeBar, 0.5);
+        AnchorUtil.setAnchorY(this.lifeBar, 0.5);
+        this.addChild(this.lifeBar);
+        this.roleName = new egret.TextField();
+        this.addChild(this.roleName);
 
         this.controller = $controller;
     }

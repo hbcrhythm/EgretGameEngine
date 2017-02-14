@@ -5,7 +5,7 @@
 class ActTest{
     public constructor(){
         var groupName:string = "preload";
-        var subGroups:Array<string> = ["preload_core", "preload_battle"];
+        var subGroups:Array<string> = ["preload_core", "preload_battle", "preload_ui"];
         App.ResourceUtils.loadGroups(groupName, subGroups, this.onResourceLoadComplete, this.onResourceLoadProgress, this);
     }
 

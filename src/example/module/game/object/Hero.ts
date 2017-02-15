@@ -15,7 +15,6 @@ class Hero extends BaseFrameGameObject{
     private attackIndex:number = 0;
     private effectArmature:DragonBonesArmatureContainer;
     // private roleName:egret.TextField;
-    // private liftBa
 
     public constructor($controller:BaseController){
         super($controller);
@@ -67,7 +66,6 @@ class Hero extends BaseFrameGameObject{
         this.roleName.text = "hbc";
         this.roleName.x = -20;
         this.roleName.y = -this.armature.height - 20;
-        console.log(this.lifeBar);
         // this.lifeBar.width = 30;
         // this.lifeBar.height = 30;
         this.lifeBar.x = 0;
@@ -112,7 +110,6 @@ class Hero extends BaseFrameGameObject{
     }
 
     public attack():void{
-        console.log("this.y", this.roleName.x , "this.height", this.roleName.y);
         if(this.isJump)
             return;
 

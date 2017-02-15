@@ -10,14 +10,19 @@ class LifeBar extends egret.Sprite{
         super();
         this.bg     = App.DisplayUtils.createBitmap("lifeBarBg");
         this.bar    = App.DisplayUtils.createBitmap("lifeBar");
+        this.addChild(this.bg);
         this.addChild(this.bar);
+        this.bg.width = 115;
+        this.bar.width = 115;
+        this.bar.height = 20;
+        this.bg.height = 20;
         this.cacheAsBitmap = true;
     }
 
     public setProgress(hp:number, life:number){
         var width = 0;
         if(hp > 0){
-            width = 120 * (hp / life);
+            width = 100 * (hp / life);
         }
         
         // var num:number =  life;
@@ -26,6 +31,6 @@ class LifeBar extends egret.Sprite{
     }
 
     public reSet(){
-        this.bar.width = 18;
+        this.bar.width = 115;
     }
 };

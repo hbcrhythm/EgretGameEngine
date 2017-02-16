@@ -34,6 +34,8 @@ class BaseGameObject extends egret.DisplayObjectContainer {
         AnchorUtil.setAnchorY(this.lifeBar, 0.5);
         this.addChild(this.lifeBar);
         this.roleName = new egret.TextField();
+        AnchorUtil.setAnchorX(this.roleName, 0.5);
+        AnchorUtil.setAnchorY(this.roleName,0.5);
         this.addChild(this.roleName);
 
         this.controller = $controller;

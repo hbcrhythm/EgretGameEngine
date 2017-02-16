@@ -14,6 +14,15 @@ class Boss extends Enemy{
         this.move_time = App.RandomUtils.limitInteger(1000, 2000);
         this.attack_time = App.RandomUtils.limitInteger(1000, 2000);
         this.hp = 500;
+        this.maxHp = 500;
+        this.roleName.text = "boss";
+        // this.roleName.x = -20;
+        this.roleName.y = -this.armature.height - 20;
+        // this.lifeBar.width = 30;
+        // this.lifeBar.height = 30;
+        this.lifeBar.x = 0;
+        this.lifeBar.y = -this.armature.height + 20;
+        this.addChild(this.lifeBar);
         this.setAttackType(1);
     }
 

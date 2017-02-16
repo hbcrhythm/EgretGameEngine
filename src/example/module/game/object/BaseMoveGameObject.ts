@@ -198,6 +198,9 @@ class BaseMoveGameObject extends BaseGameObject{
     public walkTo($speed:number, $endX:number, $endY:number):void{
         this.moveTo($speed, $endX, $endY);
         this.scaleX = this.endX >= this.x ? 1 : -1;
+        this.lifeBar.scaleX = this.endX >= this.x ? 1 : -1;
+        this.roleName.scaleX = this.endX >= this.x ? 1 : -1;
+        // this.armature.scaleX = this.endX >= this.x ? 1: -1;
         this.gotoMove();
     }
 
@@ -208,6 +211,9 @@ class BaseMoveGameObject extends BaseGameObject{
         this.endY = 0;
         this.radian = Math.atan2(yFlag, xFlag);
         this.scaleX = xFlag > 0 ? 1 : -1;
+        this.lifeBar.scaleX = xFlag > 0 ? 1 : -1;;
+        this.roleName.scaleX = xFlag > 0 ? 1 : -1;;
+        // this.armature.scaleX = xFlag > 0 ? 1 : -1;
         this.gotoMove();
     }
 

@@ -16,6 +16,7 @@ class HomeView extends BaseEuiView{
     public warehouseBtn:eui.Image;
     public factoryBtn:eui.Image;
     public moreBtn:eui.Image;
+    public headDisplay:eui.Image;
 
     /**
      *对面板进行显示初始化，用于子类继承
@@ -23,7 +24,6 @@ class HomeView extends BaseEuiView{
      */
     public initUI():void{
         super.initUI();
-
         this.menu.addEventListener(egret.TouchEvent.TOUCH_TAP,this.menuClickHandler,this);
         this.menuBtn.addEventListener(egret.Event.CHANGE,this.menuBtnChangeHandler,this);
         this.friendBtn.addEventListener(egret.TouchEvent.TOUCH_TAP,this.friendClickHandler,this);
@@ -90,4 +90,6 @@ class HomeView extends BaseEuiView{
             this.menu.visible = false;
         }
     }
+
+
 }

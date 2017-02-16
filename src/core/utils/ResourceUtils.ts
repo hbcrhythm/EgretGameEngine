@@ -61,6 +61,7 @@ class ResourceUtils extends BaseClass {
 
         var arr:any = this._configs.shift();
         RES.addEventListener(RES.ResourceEvent.CONFIG_COMPLETE, this.onConfigCompleteHandle, this);
+        // RES.addEventListener(RES.ResourceEvent.GROUP_LOAD_ERROR, this.onResourceLoadError, this);
         RES.loadConfig(arr[0], arr[1]);
     }
 

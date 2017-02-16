@@ -29,6 +29,15 @@ class Enemy extends BaseFrameGameObject{
 
     public init():void {
         super.init();
+        this.maxHp = 300;
+        this.roleName.text = "怪物";
+        // this.roleName.x = -20;
+        this.roleName.y = -this.armature.height - 5;
+        // this.lifeBar.width = 30;
+        // this.lifeBar.height = 30;
+        this.lifeBar.x = 0;
+        this.lifeBar.y = -this.armature.height + 20;
+        this.addChild(this.lifeBar);
         this.gotoIdle();
     }
 

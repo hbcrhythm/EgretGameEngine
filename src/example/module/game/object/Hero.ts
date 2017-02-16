@@ -13,7 +13,8 @@ class Hero extends BaseFrameGameObject{
 
     private attackMaxIndex:number = 0;
     private attackIndex:number = 0;
-    private effectArmature:DragonBonesArmatureContainer;
+    // private effectArmature:DragonBonesArmatureContainer;
+    public effectArmature:DragonBonesArmatureContainer;
     // private roleName:egret.TextField;
 
     public constructor($controller:BaseController){
@@ -64,8 +65,8 @@ class Hero extends BaseFrameGameObject{
         this.gotoIdle();
         this.maxHp = 300;
         this.roleName.text = "hbc";
-        this.roleName.x = -20;
-        this.roleName.y = -this.armature.height - 20;
+        // this.roleName.x = -20;
+        this.roleName.y = -this.armature.height - 5;
         // this.lifeBar.width = 30;
         // this.lifeBar.height = 30;
         this.lifeBar.x = 0;
